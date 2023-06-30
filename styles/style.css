@@ -1,0 +1,124 @@
+/*SETUP*/
+
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+html { box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+/*HEADER*/
+
+header {
+    background-image: url(../assets/web-developer.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    color:white;
+    font-size: 50px;
+    position: relative;
+}
+
+header ul {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    transition: .4s;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+header ul li {
+    list-style: none;
+    transition: .3s ease;
+    width: 100%;
+    background-image:
+    linear-gradient(#ffffff 0 0),
+    linear-gradient(#ffffff 0 0);
+    background-repeat: no-repeat;
+    background-size: 50% .08em;
+    background-position:
+        -100% 100%,
+        200% 0;
+    transition: background-size .3s, background-position .3s .3s;
+    padding-left: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+header ul li:hover {
+    background-size: 50.1% 100%;
+    background-position:
+      0 100%,
+      100% 0;  
+    transition: background-size .3s .3s, background-position .3s;
+}
+
+header ul li:hover > a {
+    color: black;
+}
+
+.header-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  z-index: 1;
+  font-family: 'Monoton', cursive;
+  animation-name: translate;
+  animation-duration: 1s;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@keyframes translate {
+    0% {
+        transform: translate(100%, 0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+.my-image {
+    transition: 1s ease;
+    transform: translateX(100%);
+    opacity: 0;
+
+}
+
+.my-image.appear {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+body {
+    height: 8000px;
+    overflow-x: hidden;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.95) 50%, rgba(0, 0, 0, 0.5)), url("../assets/Gaspare_Tortora_vintage_patterns_with_computers_keyboards_elect_7e109a1a-ea5a-42d9-84cb-96753d9b6f4d.png");
+    background-position: center;
+    background-size: contain;
+    background-clip:content-box;
+}
+
+body, html {
+    scroll-behavior: smooth;
+}
