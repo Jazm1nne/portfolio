@@ -1,0 +1,20 @@
+/*DARK THEME*/
+:root {
+    --background-color: #001C30;
+    --text-color: #2fc1f2;
+    --background: #176b87;
+  }
+
+  * {
+    color: var(--text-color);
+  }
+
+  body {
+    background-color: var(--background-color);
+  }
+
+  header ul li {
+    background-image:
+    linear-gradient(var(--background) 0 0),
+    linear-gradient(var(--background) 0 0);
+  }
