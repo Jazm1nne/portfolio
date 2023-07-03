@@ -1,8 +1,11 @@
 /*DARK THEME*/
 :root {
-    --background-color: #001C30;
-    --text-color: #2fc1f2;
-    --background: #176b87;
+    --background-color: #101215;
+    --text-color: #f6f6f6;
+    --list-background: rgba(240, 46, 170, 0.6);
+    --type-background: rgba(0, 0, 0, 0.5);
+    --div-background: #212121;
+    --accent: rgba(240, 46, 170, 0.6)
   }
 
   * {
@@ -15,6 +18,17 @@
 
   header ul li {
     background-image:
-    linear-gradient(var(--background) 0 0),
-    linear-gradient(var(--background) 0 0);
+    linear-gradient(var(--list-background) 0 0),
+    linear-gradient(var(--list-background) 0 0);
+    outline: .3rem solid var(--accent);
+  }
+
+  .typewriter {
+    background-color: var(--type-background);
+    border: 1px solid var(--accent);
+  }
+
+  .about-text {
+    outline: 1px solid white;
+    background-color: var(--div-background);
   }
