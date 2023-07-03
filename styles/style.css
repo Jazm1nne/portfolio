@@ -6,12 +6,12 @@ html { box-sizing: border-box;}
 
 *, *:before, *:after {box-sizing: inherit}
 
-.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+/* .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;} */
 
 /*HEADER*/
 
 header {
-    background-image: url(../assets/web-developer.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/0_3.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -60,6 +60,10 @@ header ul li {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: transform .6s ease-out;
+    border-radius: 100px 0 0 100px;
+    outline: 1px solid white;
 }
 
 header ul li:hover {
@@ -67,24 +71,27 @@ header ul li:hover {
     background-position:
       0 100%,
       100% 0;  
-    transition: background-size .3s .3s, background-position .3s;
+    transition: background-size .3s .3s, background-position .3s, transform .6s;
+    transform: translate(-85%);
 }
 
-header ul li:hover > a {
+header ul li:hover > a, header ul li:hover > i {
     color: black;
+    background-color: none;
 }
 
 .header-menu {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: 25vh;
   right: 0;
   width: 50%;
-  height: 100vh;
+  height: 50vh;
   z-index: 1;
   font-family: 'Monoton', cursive;
   animation-name: translate;
   animation-duration: 1s;
-  background-color: rgba(0, 0, 0, 0.8);
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  transform: translate(85%);
 }
 
 @keyframes translate {
@@ -93,7 +100,7 @@ header ul li:hover > a {
         opacity: 0;
     }
     100% {
-        transform: translate(0, 0);
+        transform: translate(85%, 0);
         opacity: 1;
     }
 }
@@ -113,12 +120,41 @@ header ul li:hover > a {
 body {
     height: 8000px;
     overflow-x: hidden;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.95) 50%, rgba(0, 0, 0, 0.5)), url("../assets/Gaspare_Tortora_vintage_patterns_with_computers_keyboards_elect_7e109a1a-ea5a-42d9-84cb-96753d9b6f4d.png");
-    background-position: center;
-    background-size: contain;
-    background-clip:content-box;
 }
 
 body, html {
     scroll-behavior: smooth;
 }
+
+h1 {
+    margin: 0;
+}
+  
+.typewriter {
+    /* position: relative; */
+    width: 25%;
+    white-space: normal;
+    word-wrap: break-word;
+
+  }
+  
+  h1::after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 0.8em;
+    background-color: rgb(255, 255, 255);
+    margin-left: 0.2em;
+    animation: blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes blink-caret {
+    from,
+    to {
+      background-color: transparent;
+    }
+    50% {
+      background-color: rgb(255, 255, 255);
+    }
+  }
+  
