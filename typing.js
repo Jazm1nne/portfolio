@@ -1,8 +1,8 @@
 export const typeWriter = () => {
     const typewriter = document.querySelector('h1');
-    const text = `Hello, how are you doing?`;
+    const text = `A Web Developer on an epic journey to conquer the digital universe </>`;
     const textLength = text.length;
-    const cadence = 150;
+    const cadence = 50;
     let index = 0;
     let intervalId; // Variable to hold the interval ID
   
