@@ -1,10 +1,10 @@
 /*DARK THEME*/
 :root {
-    --background-color: #101215;
+    --background-color: rgb(16, 18, 21);
     --text-color: #f6f6f6;
     --list-background: rgba(240, 46, 170, 0.6);
     --type-background: rgba(0, 0, 0, 0.5);
-    --div-background: #212121;
+    --div-background: #323232;
     --accent: rgba(240, 46, 170, 0.6)
   }
 
@@ -32,3 +32,11 @@
     outline: 1px solid white;
     background-color: var(--div-background);
   }
+
+  .project, .tech-stack {
+    border: 1px solid var(--accent)
+}
+
+.slider-container::before, .slider-container::after {
+  background: linear-gradient(to right, var(--background-color) 0%, rgba(255, 255, 255, 0) 100%);
+}
