@@ -5,7 +5,8 @@
     --list-background: rgba(240, 46, 170, 0.6);
     --type-background: rgba(0, 0, 0, 0.5);
     --div-background: #323232;
-    --accent: rgba(240, 46, 170, 0.6)
+    --accent: rgba(240, 46, 170, 0.8);
+    --accent-hover: rgb(239, 86, 183);
   }
 
   * {
@@ -37,6 +38,14 @@
     border: 1px solid var(--accent)
 }
 
-.slider-container::before, .slider-container::after {
-  background: linear-gradient(to right, var(--background-color) 0%, rgba(255, 255, 255, 0) 100%);
+  .slider-container::before, .slider-container::after {
+    background: linear-gradient(to right, var(--background-color) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+.call-to-action {
+    background-color: var(--accent);
 }
+
+/* .call-to-action:hover {
+    background-color: var(--accent-hover);
+} */
