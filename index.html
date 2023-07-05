@@ -18,6 +18,7 @@
         <div class="typewriter">
             <h1></h1>
             <span class="blink-line"></span>
+            <button class="call-to-action">Work with me</button>
         </div>
         <div class="header-menu">
             <ul>
@@ -95,6 +96,14 @@
         </section>
         <section class="contact wrapper" id="contact">
             <h2>Contact Me</h2>
+            <form id="my-form" action="https://formspree.io/f/mjvqvbyg" method="POST">
+                <label>Email:</label>
+                <input type="email" name="email" />
+                <label>Message:</label>
+                <input type="text" name="message" />
+                <button id="my-form-button">Submit</button>
+                <p id="my-form-status"></p>
+              </form>
         </section>
     </main>
     <footer></footer>
