@@ -83,7 +83,7 @@ header ul li:hover > a, header ul li:hover > i {
 
 .header-menu {
   position: fixed;
-  font-size: 1.6rem;
+  font-size: 2rem;
   top: 25vh;
   right: 0;
   width: 25%;
@@ -247,7 +247,7 @@ p {
     display: flex;
     gap: 4rem;
     margin-top: 6rem;
-    animation: scroll 20s linear infinite;
+    animation: scroll 40s linear infinite;
     padding: 2rem;
 }
 
@@ -287,7 +287,7 @@ p {
     }
 
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-80%);
     }
 }
 
@@ -356,3 +356,86 @@ p {
     grid-row-start: 3;
     grid-row-end: 3;
 }
+
+/*SOCIAL*/
+
+.social-container {
+    display: flex;
+    height: 200px;
+    justify-content: space-around;
+    margin: 10rem 0;
+    perspective: 3000px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+    gap: 2rem;
+}
+
+.social-button {
+    font-size: 2rem;
+    position: relative;
+}
+
+  .social-button {
+    height: 30px;
+    width: 250px;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateX(-40deg) rotateY(40deg);
+    transition: all .5s ease-in, transform .5s;
+}
+
+    .social-button:hover {
+        transform: rotateX(-80deg) rotateY(10deg) rotateZ(50deg) translateZ(-40px)
+    }
+  
+  .side {
+    position: absolute;
+    border: 1px solid #ddd;
+    opacity: .1;
+}
+    .side:nth-child(1) {
+        opacity: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80px;
+        width: 250px;
+        font-size: 16px;
+        font-weight: 900;
+        transform: rotateX(90deg) translateZ(40px);
+        color: #fff;
+}
+
+    .side:nth-child(1) i {
+    margin-right: 40px;
+}
+    .side:nth-child(2) {
+      opacity: .4;
+      height: 80px;
+      width: 250px;
+      transform: rotateX(-90deg) translateZ(-10px);
+    }
+    .side:nth-child(3) {
+      height: 30px;
+      width: 80px;
+      transform: rotateY(-90deg) translateZ(40px);
+    }
+    .side:nth-child(4) {
+      height: 30px;
+      width: 80px;
+      transform: rotateY(90deg) translateZ(40px);
+      right: 0;
+    }
+    .side:nth-child(5) {
+      height: 30px;
+      width: 250px;
+      transform: rotateX(0deg) translateZ(40px);
+    }
+    .side:nth-child(6) {
+      height: 30px;
+      width: 250px;
+      transform: rotateX(180deg) translateZ(40px);
+    }
