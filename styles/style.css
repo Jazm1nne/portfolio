@@ -387,15 +387,51 @@ p {
     transition: all .5s ease-in, transform .5s;
 }
 
-    .social-button:hover {
-        transform: rotateX(-80deg) rotateY(10deg) rotateZ(50deg) translateZ(-40px)
+    .facebook:hover {
+        transform: rotateX(-80deg) rotateY(3deg) rotateZ(20deg) translateZ(-15px) translateY(-41px) translateX(-7px);
+    }
+
+    .facebook:hover .side {
+        background-color: #3b5998;
+    }
+
+    .instagram:hover {
+        transform: rotateX(-80deg) rotateY(3deg) rotateZ(20deg) translateZ(-15px) translateY(-41px) translateX(-7px);
+    }
+
+    .instagram:hover .side {
+        background-color: #c32aa3;
+    }
+
+    .github:hover {
+        transform: rotateX(-80deg) rotateY(3deg) rotateZ(20deg) translateZ(-15px) translateY(-41px) translateX(-7px);
+    }
+
+    .github:hover .side {
+        background-color: #000000;
+    }
+
+    .linkedin:hover {
+        transform: rotateX(-80deg) rotateY(3deg) rotateZ(20deg) translateZ(-15px) translateY(-41px) translateX(-7px);
+    }
+
+    .linkedin:hover .side {
+        background-color: #0a66c2
     }
   
   .side {
     position: absolute;
     border: 1px solid #ddd;
-    opacity: .1;
+    opacity: .5;
+    transition: .5s;
+    font-size: 2rem;
+    text-decoration: none;
 }
+
+    .side i {
+        font-size: 4rem;
+    }
+
     .side:nth-child(1) {
         opacity: 1;
         display: flex;
@@ -403,7 +439,6 @@ p {
         justify-content: center;
         height: 80px;
         width: 250px;
-        font-size: 16px;
         font-weight: 900;
         transform: rotateX(90deg) translateZ(40px);
         color: #fff;
