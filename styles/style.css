@@ -34,7 +34,6 @@ header ul {
 }
 
 header ul li a {
-    text-decoration: none;
     color: white;
     transition: .4s;
     width: 100%;
@@ -183,6 +182,10 @@ h1::after {
 
 ul, li, a, .call-to-action, .submit-button {
     cursor: url("../assets/icons8-hand-cursor-40.png"), pointer;
+}
+
+a {
+    text-decoration: none;
 }
 
 body {
