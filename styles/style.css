@@ -11,7 +11,7 @@ html { box-sizing: border-box; font-size: 62.5%;}
 /*HEADER*/
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/hand-1.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/Gaspare_Tortora_minimalistic_high_resolution_web_developer_imag_56225a52-2a70-4fc0-8ffe-b7027d403eb8.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -19,7 +19,7 @@ header {
     height: 100vh;
     color:white;
     position: relative;
-    box-shadow: 0 -5px 25px white;
+    border-bottom: 1px solid white;
 }
 
 header ul {
@@ -391,7 +391,7 @@ p, label {
 
 
 .facebook:hover {
-    transform: rotateX(-80deg) rotateY(3deg) rotateZ(20deg) translateZ(-15px) translateY(-41px) translateX(-7px);
+    transform: rotateX(-80deg) rotateY(3deg) rotateZ(20deg) translateZ(-15px) translateY(-41px) translateX(-7px) scale3d(1.2, 1.2, 1.2);
 }
 
 .facebook:hover .side {
@@ -399,7 +399,7 @@ p, label {
 }
 
 .instagram:hover {
-    transform: rotateX(-80deg) rotateY(3deg) rotateZ(20deg) translateZ(-15px) translateY(-41px) translateX(-7px);
+    transform: rotateX(-80deg) rotateY(3deg) rotateZ(20deg) translateZ(-15px) translateY(-41px) translateX(-7px) scale3d(1.2, 1.2, 1.2);
 }
 
 .instagram:hover .side {
@@ -407,7 +407,7 @@ p, label {
 }
 
 .github:hover {
-    transform: rotateX(-80deg) rotateY(3deg) rotateZ(20deg) translateZ(-15px) translateY(-41px) translateX(-7px);
+    transform: rotateX(-80deg) rotateY(3deg) rotateZ(20deg) translateZ(-15px) translateY(-41px) translateX(-7px) scale3d(1.2, 1.2, 1.2);
 }
 
 .github:hover .side {
@@ -415,7 +415,7 @@ p, label {
 }
 
 .linkedin:hover {
-    transform: rotateX(-80deg) rotateY(3deg) rotateZ(20deg) translateZ(-15px) translateY(-41px) translateX(-7px);
+    transform: rotateX(-80deg) rotateY(3deg) rotateZ(20deg) translateZ(-15px) translateY(-41px) translateX(-7px) scale3d(1.2, 1.2, 1.2);
 }
 
 .linkedin:hover .side {
@@ -485,7 +485,7 @@ p, label {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        margin-top: 10rem;
+        margin: 10rem 0 0 0;
         position: relative;
     }
 
@@ -539,6 +539,6 @@ p, label {
         background-position: center;
         background-attachment: fixed;
         padding: 10rem;
-        height: 100vh;
+        height: fit-content;
         outline: 1px solid white;
     }
