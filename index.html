@@ -135,16 +135,23 @@
             </div>
         </section>
 
-        <section class="contact wrapper" id="contact">
+        <section class="contact" id="contact">
             <h2>Contact Me</h2>
-            <form id="my-form" action="https://formspree.io/f/mjvqvbyg" method="POST">
-                <label>Email:</label>
-                <input type="email" name="email" />
-                <label>Message:</label>
-                <input type="text" name="message" />
-                <button id="my-form-button">Submit</button>
+            <form id="my-form" class="form wrapper" action="https://formspree.io/f/mjvqvbyg" method="POST">
+                <div class="contact-info">
+                    <label for="name"></label>
+                    <input type="text" name="name" id="name" placeholder="Full Name" required>
+                    <label for="email"></label>
+                    <input type="email" name="email" id="email" placeholder="Email" required/>
+                </div>
+                <div class="contact-message">
+                    <label for="message"></label>
+                    <input type="text" name="message" id="message" placeholder="What can I do for you?" required/>
+                </div>
+                <button id="my-form-button" type="submit" class="submit-button">Submit</button>
                 <p id="my-form-status"></p>
-              </form>
+
+            </form>
         </section>
     </main>
     <footer></footer>

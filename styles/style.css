@@ -86,8 +86,8 @@ header ul li:hover > a, header ul li:hover > i {
   font-size: 2rem;
   top: 25vh;
   right: 0;
-  width: 25%;
-  height: 50vh;
+  width: 400px;
+  height: 400px;
   z-index: 1;
   font-family: 'Monoton', cursive;
   animation-name: translate;
@@ -163,13 +163,11 @@ h1::after {
     bottom: -30px;
     right: 140px;
     animation: hover 3s ease;
+    border: none;
+    transition: .3s ease;
 }
 
-/* .call-to-action:hover {
-    background-image: linear-gradient(to right, rgb(239, 86, 183) 0%, rgb(239, 86, 183) 100%);
-}
-
-@keyframes hover {
+/* @keyframes hover {
     0% {
         background-position: 0% 100%;
         background-size: 0% 100%;
@@ -183,14 +181,12 @@ h1::after {
 
   /*GENERAL STYLING*/
 
-ul, li, a, .call-to-action {
+ul, li, a, .call-to-action, .submit-button {
     cursor: url("../assets/icons8-hand-cursor-40.png"), pointer;
 }
 
 body {
-    height: 8000px;
     overflow-x: hidden;
-    cursor: url("../assets/icons8-select-cursor-48.png"), auto;
 }
 
 body, button {
@@ -199,6 +195,10 @@ body, button {
 
 body, html {
     scroll-behavior: smooth;
+}
+
+body, label {
+    cursor: url("../assets/icons8-select-cursor-48.png"), auto;
 }
 
 h1 {
@@ -211,7 +211,7 @@ h2 {
     font-family: 'Monoton', cursive;
 }
 
-p {
+p, label {
     font-size: 2rem;
 }
 
@@ -274,6 +274,7 @@ p {
     right: 0;
     top: 0;
     transform: rotateZ(180deg);
+    z-index: 0;
 }
 
 .slider-container::before {
@@ -362,8 +363,9 @@ p {
 .social-container {
     display: flex;
     height: 200px;
+    min-width: fit-content;
     justify-content: space-around;
-    margin: 10rem 0;
+    margin: 20rem 0;
     perspective: 3000px;
     text-align: center;
     position: relative;
@@ -375,10 +377,6 @@ p {
 
 .social-button {
     font-size: 2rem;
-    position: relative;
-}
-
-  .social-button {
     height: 30px;
     width: 250px;
     transform-style: preserve-3d;
@@ -387,37 +385,42 @@ p {
     transition: all .5s ease-in, transform .5s;
 }
 
-    .facebook:hover {
-        transform: rotateX(-80deg) rotateY(3deg) rotateZ(20deg) translateZ(-15px) translateY(-41px) translateX(-7px);
-    }
+.social-button:hover .side:nth-child(2) {
+    box-shadow: none;
+}
 
-    .facebook:hover .side {
-        background-color: #3b5998;
-    }
 
-    .instagram:hover {
-        transform: rotateX(-80deg) rotateY(3deg) rotateZ(20deg) translateZ(-15px) translateY(-41px) translateX(-7px);
-    }
+.facebook:hover {
+    transform: rotateX(-80deg) rotateY(3deg) rotateZ(20deg) translateZ(-15px) translateY(-41px) translateX(-7px);
+}
 
-    .instagram:hover .side {
-        background-color: #c32aa3;
-    }
+.facebook:hover .side {
+    background-color: #3b5998;
+}
 
-    .github:hover {
-        transform: rotateX(-80deg) rotateY(3deg) rotateZ(20deg) translateZ(-15px) translateY(-41px) translateX(-7px);
-    }
+.instagram:hover {
+    transform: rotateX(-80deg) rotateY(3deg) rotateZ(20deg) translateZ(-15px) translateY(-41px) translateX(-7px);
+}
 
-    .github:hover .side {
-        background-color: #000000;
-    }
+.instagram:hover .side {
+    background-color: #c32aa3;
+}
 
-    .linkedin:hover {
-        transform: rotateX(-80deg) rotateY(3deg) rotateZ(20deg) translateZ(-15px) translateY(-41px) translateX(-7px);
-    }
+.github:hover {
+    transform: rotateX(-80deg) rotateY(3deg) rotateZ(20deg) translateZ(-15px) translateY(-41px) translateX(-7px);
+}
 
-    .linkedin:hover .side {
-        background-color: #0a66c2
-    }
+.github:hover .side {
+    background-color: #000000;
+}
+
+.linkedin:hover {
+    transform: rotateX(-80deg) rotateY(3deg) rotateZ(20deg) translateZ(-15px) translateY(-41px) translateX(-7px);
+}
+
+.linkedin:hover .side {
+    background-color: #0a66c2
+}
   
   .side {
     position: absolute;
@@ -452,6 +455,7 @@ p {
       height: 80px;
       width: 250px;
       transform: rotateX(-90deg) translateZ(-10px);
+      box-shadow: -5px -5px 30px -5px;
     }
     .side:nth-child(3) {
       height: 30px;
@@ -473,4 +477,68 @@ p {
       height: 30px;
       width: 250px;
       transform: rotateX(180deg) translateZ(40px);
+    }
+
+    /*CONTACT*/
+
+    .form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 10rem;
+        position: relative;
+    }
+
+    .contact-info {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .contact-message {
+        display: flex;
+        width: 100%;
+    }
+
+    input[id="name"], input[id="email"] {
+        height: 4.5rem;
+        width: 100%;
+    }
+
+    input[id="email"] {
+        margin-left: 6rem;
+    }
+
+    input[id="message"]{
+        height: 400px;
+        width: 100%;
+    }
+
+    input {
+        outline: none;
+        border: none;
+        background-color: transparent;
+        font-size: 2rem;
+    }
+
+    .submit-button {
+        font-size: 2rem;
+        border: none;
+        margin-top: 5rem;
+        align-self: center;
+        border-radius: 5rem;
+        padding: 1rem 4rem;
+        border: none;
+        transition: .3s ease;
+    }
+
+    .contact {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/Gaspare_Tortora_A_close-up_shot_of_a_hand_typing_on_a_black_key_e23c8544-3bce-43cb-95f4-cf77407ad897.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        padding: 10rem;
+        height: 100vh;
+        outline: 1px solid white;
     }
