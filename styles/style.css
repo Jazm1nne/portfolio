@@ -488,7 +488,7 @@ p, label {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        margin: 10rem 0 0 0;
+        margin: 10rem auto auto auto;
         position: relative;
     }
 
