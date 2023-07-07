@@ -543,5 +543,6 @@ p, label {
         background-attachment: fixed;
         padding: 10rem;
         height: fit-content;
+        min-height: 100vh;
         outline: 1px solid white;
     }
