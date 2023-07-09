@@ -115,6 +115,7 @@ header ul li:hover > a, header ul li:hover > i {
 
 .my-image img {
     height: 45rem;
+    border-radius: 23rem;
 }
 
 .my-image.appear {
@@ -161,27 +162,21 @@ h1::after {
     position: absolute;
     bottom: -30px;
     right: 140px;
-    animation: hover 3s ease;
     border: none;
-    transition: .3s ease;
 }
-
-/* @keyframes hover {
-    0% {
-        background-position: 0% 100%;
-        background-size: 0% 100%;
-    }
-    100% {
-        background-position: 100% 100%;
-        background-size: 100% 100%;
-    }
-} */
-
 
   /*GENERAL STYLING*/
 
+  section {
+    min-width: 100vh
+  }
+
 ul, li, a, button {
     cursor: url("../assets/icons8-hand-cursor-40.png"), pointer;
+}
+
+button {
+    transition: .5s;
 }
 
 a {
@@ -215,7 +210,7 @@ h2 {
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 p, label {
@@ -237,7 +232,6 @@ p, label {
     padding: 3rem;
     border-radius: 1.5rem;
     height: fit-content;
-
     box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 }
 
@@ -334,15 +328,16 @@ p, label {
 .project-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    grid-gap: 5rem;
+    margin-top: 10rem;
 }
 
 .project, .tech-stack {
-    padding: 2rem;
-    height: 160px;
+    height: 200px;
     overflow: hidden;
     position: relative;
-    transition: height .3s ease-in-out;
+    transition: .3s ease;
+    border-radius: 1rem;
 }
 
 .more-details {
@@ -352,11 +347,12 @@ p, label {
     border: none;
     font-size: 2rem;
     border-radius: 5rem;
-    padding: 1rem 2rem
+    padding: 1rem 2rem;
 }
 
 iframe {
-    transform: translateY(2rem) 
+    transform: translateY(2rem);
+    opacity: 0;
 }
 
 .project-1 {
@@ -401,6 +397,41 @@ iframe {
     grid-row-end: 3;
 }
 
+.project-info {
+    padding: 1rem;
+}
+
+.tech-img {
+    display: flex;
+    gap: 1rem;
+}
+
+.tech-img img {
+    height: 4rem;
+}
+
+.tech-stack {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.tech-buttons {
+    align-self: flex-end;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.tech-buttons button {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+}
+
 /*SOCIAL*/
 
 .social-container {
@@ -408,7 +439,7 @@ iframe {
     height: 200px;
     min-width: fit-content;
     justify-content: space-around;
-    margin: 20rem 0;
+    margin: 15rem 0;
     perspective: 3000px;
     text-align: center;
     position: relative;
@@ -572,7 +603,6 @@ iframe {
         border-radius: 5rem;
         padding: 1rem 4rem;
         border: none;
-        transition: .3s ease;
     }
 
     .contact {
