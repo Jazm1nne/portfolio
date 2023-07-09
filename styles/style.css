@@ -19,7 +19,7 @@ header {
     height: 100vh;
     color:white;
     position: relative;
-    border-bottom: 1px solid white;
+    outline: 1px solid white;
 }
 
 header ul {
@@ -180,7 +180,7 @@ h1::after {
 
   /*GENERAL STYLING*/
 
-ul, li, a, .call-to-action, .submit-button {
+ul, li, a, button {
     cursor: url("../assets/icons8-hand-cursor-40.png"), pointer;
 }
 
@@ -214,8 +214,12 @@ h2 {
     font-family: 'Monoton', cursive;
 }
 
-p, label {
+h3 {
     font-size: 2rem;
+}
+
+p, label {
+    font-size: 1.8rem;
 }
 
 .wrapper {
@@ -295,15 +299,34 @@ p, label {
     }
 }
 
+.tech {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
 .tech-icon {
     width: 80px;
     transition: .3s;
     filter: grayscale(100%);
 }
 
+.tech-icon + p {
+    opacity: 0;
+    transition: .3s;
+    position: absolute;
+    bottom: -2.5rem;
+}
+
 .tech-icon:hover {
-    transform: scale(1.3);
+    transform: translateY(-2.5rem);
     filter: grayscale(0%);
+}
+
+.tech-icon:hover + p {
+    opacity: 1;
 }
 
 /*PROJECTS*/
@@ -311,12 +334,29 @@ p, label {
 .project-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     grid-gap: 20px;
 }
 
 .project, .tech-stack {
-    height: 100px;
+    padding: 2rem;
+    height: 160px;
+    overflow: hidden;
+    position: relative;
+    transition: height .3s ease-in-out;
+}
+
+.more-details {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    border: none;
+    font-size: 2rem;
+    border-radius: 5rem;
+    padding: 1rem 2rem
+}
+
+iframe {
+    transform: translateY(2rem) 
 }
 
 .project-1 {
@@ -541,7 +581,7 @@ p, label {
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
-        padding: 10rem;
+        padding: 5rem;
         height: fit-content;
         min-height: 100vh;
         outline: 1px solid white;

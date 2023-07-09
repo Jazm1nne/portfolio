@@ -42,11 +42,11 @@
     background: linear-gradient(to right, var(--background-color) 0%, rgba(255, 255, 255, 0) 100%);
   }
 
-.call-to-action, .submit-button {
+.call-to-action, .submit-button, .more-details {
     background-color: var(--accent);
 }
 
-.call-to-action:hover, .submit-button:hover {
+.call-to-action:hover, .submit-button:hover, .more-details:hover {
     background-color: var(--accent-hover);
 }
 
@@ -56,4 +56,5 @@ input {
 
 input::placeholder {
   color: var(--text-color);
+  opacity: 0.6;
 }
