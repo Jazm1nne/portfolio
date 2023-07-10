@@ -44,12 +44,12 @@
 
 .call-to-action, .submit-button, .more-details, .tech-buttons button {
     border: 1px solid var(--accent);
-    box-shadow: inset 0 0 0 0 var(--accent);
+    box-shadow: inset 0 0 0 -100px var(--accent);
     background-color: var(--background-color);
 }
 
 .call-to-action:hover, .submit-button:hover, .more-details:hover, .tech-buttons button:hover {
-    box-shadow: inset 400px 0 0 0 var(--accent);
+    box-shadow: inset 400px 0 0 -100px var(--accent);
 }
 
 input {
