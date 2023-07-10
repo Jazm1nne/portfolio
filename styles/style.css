@@ -380,7 +380,7 @@ iframe {
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 2;
-    transform: translateX(-100%);
+    transform: translateX(100%);
     opacity: 0;
     transition: .6s;
 }
@@ -390,7 +390,7 @@ iframe {
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 2;
-    transform: translateX(100%);
+    transform: translateX(-100%);
     opacity: 0;
     transition: .6s;
 }

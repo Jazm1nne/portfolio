@@ -21,8 +21,8 @@ const projectEffect = () => {
         } else {
             document.querySelector('.project-1').style = "transform: translateX(-100%); opacity: 0"
             document.querySelector('.tech-stack-1').style = "transform: translateY(-100%); opacity: 0"
-            document.querySelector('.project-2').style = "transform: translateX(-100%); opacity: 0"
-            document.querySelector('.tech-stack-2').style = "transform: translateX(100%); opacity: 0"
+            document.querySelector('.project-2').style = "transform: translateX(100%); opacity: 0"
+            document.querySelector('.tech-stack-2').style = "transform: translateX(-100%); opacity: 0"
             document.querySelector('.project-3').style = "transform: translateX(-100%); opacity: 0"
             document.querySelector('.tech-stack-3').style = "transform: translateY(100%); opacity: 0"
         }
