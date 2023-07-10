@@ -5,13 +5,8 @@ const projectEffect = () => {
         const section = document.querySelector('#projects');
         const sectionTop = section.offsetTop + 500;
         const sectionBottom = sectionTop + section.offsetHeight;
-        console.log(scrollPosition)
-        console.log(section)
-        console.log(sectionTop)
-        console.log(sectionBottom)
     
         if (scrollPosition > sectionTop && scrollPosition < sectionBottom) {
-            console.log('here')
             document.querySelector('.project-1').style = "transform: translateX(0%); opacity: 1"
             document.querySelector('.tech-stack-1').style = "transform: translateY(0%); opacity: 1"
             document.querySelector('.project-2').style = "transform: translateX(0%); opacity: 1"

@@ -4,11 +4,11 @@ const showProject = () => {
         button.addEventListener('click', () => {
             const parentElement = button.parentElement;
             if (button.textContent === 'Show project') {
-                parentElement.style.height = 'fit-content';
+                parentElement.classList.add('open-project')
                 parentElement.querySelector('iframe').style.opacity = "1";
                 button.textContent = 'Show less'
             } else {
-                parentElement.style.height = '200px';
+                parentElement.classList.add('close-project')
                 button.textContent = 'Show project'
                 parentElement.querySelector('iframe').style.opacity = "0";
             }
