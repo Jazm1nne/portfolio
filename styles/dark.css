@@ -65,3 +65,7 @@ input::placeholder {
   background-image: linear-gradient(to top, var(--accent), var(--background-color));
   outline: 1px solid white;
 }
+
+footer {
+  background-color: var(--div-background);
+}
