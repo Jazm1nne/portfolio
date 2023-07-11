@@ -35,7 +35,6 @@ header ul {
 
 header ul li a {
     color: white;
-    transition: .4s;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -75,11 +74,6 @@ header ul li i {
     font-size: 3rem;
 }
 
-header ul li:hover > a, header ul li:hover > i {
-    color: rgb(255, 255, 255);
-    background-color: none;
-}
-
 .header-menu {
   position: fixed;
   font-size: 2rem;
@@ -91,7 +85,6 @@ header ul li:hover > a, header ul li:hover > i {
   font-family: 'Monoton', cursive;
   animation-name: translate;
   animation-duration: 1s;
-  /* background-color: rgba(0, 0, 0, 0.8); */
   transform: translate(80%);
 }
 
@@ -224,6 +217,18 @@ p, label {
 
 footer {
     height: 50vh;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1rem;
+    font-size: 3rem;
+    background-color: none;
+    border-radius: 10rem;
+    padding: 1.5rem 2rem;
+    transition: .3s;
+    opacity: 0;
 }
 
 /*ABOUT*/

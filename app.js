@@ -3,6 +3,7 @@ import { typeWriter } from "./typing.js";
 import handleForm from "./form.js";
 import showProject from "./project.js";
 import projectEffect from "./projectEffect.js";
+import backToTop from "./backToTop.js";
 
 function init() {
     appearAboutImage();
@@ -10,7 +11,8 @@ function init() {
     handleForm();
     showProject();
     projectEffect();
+    backToTop();
 }
 
-init()
+init();
   

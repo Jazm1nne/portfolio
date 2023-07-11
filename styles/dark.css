@@ -42,13 +42,13 @@
     background: linear-gradient(to right, var(--background-color) 0%, rgba(255, 255, 255, 0) 100%);
   }
 
-.call-to-action, .submit-button, .more-details, .tech-buttons button {
+.call-to-action, .submit-button, .more-details, .tech-buttons button, .back-to-top {
     border: 1px solid var(--accent);
     box-shadow: inset 0 0 0 -100px var(--accent);
     background-color: var(--background-color);
 }
 
-.call-to-action:hover, .submit-button:hover, .more-details:hover, .tech-buttons button:hover {
+.call-to-action:hover, .submit-button:hover, .more-details:hover, .tech-buttons button:hover, .back-to-top:hover {
     box-shadow: inset 400px 0 0 -100px var(--accent);
 }
 
