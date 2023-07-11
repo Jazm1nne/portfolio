@@ -164,8 +164,8 @@ h1::after {
     min-width: 100vh
   }
 
-ul, li, a, button {
-    cursor: url("../assets/icons8-hand-cursor-40.png"), pointer;
+button {
+    cursor: pointer;
 }
 
 button {
@@ -186,10 +186,6 @@ body, button {
 
 body, html {
     scroll-behavior: smooth;
-}
-
-body, label {
-    cursor: url("../assets/icons8-select-cursor-48.png"), auto;
 }
 
 h1 {
@@ -641,7 +637,7 @@ iframe {
     }
 
     .contact {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/Gaspare_Tortora_A_close-up_shot_of_a_hand_typing_on_a_black_key_e23c8544-3bce-43cb-95f4-cf77407ad897.png');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/minimal.png');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
