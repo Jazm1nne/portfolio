@@ -7,6 +7,8 @@
     --div-background: #323232;
     --accent: rgba(240, 46, 170, 0.8);
     --accent-hover: rgb(239, 86, 183);
+    --signature-text: rgb(0, 0, 0);
+    --signature-bg: rgb(255, 255, 255);
   }
 
   * {
@@ -68,4 +70,13 @@ input::placeholder {
 
 footer {
   background-color: var(--div-background);
+}
+
+.signature {
+  box-shadow: inset 0 0 0 0 var(--signature-bg);
+}
+
+.signature:hover {
+  color: var(--signature-text);
+  box-shadow: inset 200px 0 0 0 var(--signature-bg);
 }
