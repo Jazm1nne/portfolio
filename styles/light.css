@@ -104,6 +104,10 @@ box-shadow: inset 200px 0 0 0 var(--signature-bg);
   color: white;
 }
 
-button:hover, button:hover a, .theme-button:not() {
+button:hover, button:hover a {
   color: white;
+}
+
+.theme-button:hover {
+  color: black;
 }
