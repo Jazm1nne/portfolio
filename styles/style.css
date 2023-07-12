@@ -11,7 +11,6 @@ html { box-sizing: border-box; font-size: 62.5%;}
 /*HEADER*/
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/Gaspare_Tortora_minimalistic_high_resolution_web_developer_imag_56225a52-2a70-4fc0-8ffe-b7027d403eb8.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -34,7 +33,6 @@ header ul {
 }
 
 header ul li a {
-    color: white;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -54,7 +52,6 @@ header ul li {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10rem 0 0 10rem;
     outline: 0.4rem solid;
 }
@@ -86,6 +83,12 @@ header ul li i {
   animation-name: translate;
   animation-duration: 1s;
   transform: translate(80%);
+}
+
+.header-menu button {
+    font-family: 'Monoton', cursive;
+    background-color: transparent;
+    border: none;
 }
 
 @keyframes translate {
@@ -162,9 +165,6 @@ h1::after {
 
 button {
     cursor: pointer;
-}
-
-button {
     transition: 1s;
 }
 
@@ -230,7 +230,6 @@ p, label {
     border-radius: 1.5rem;
     height: fit-content;
     width: 50%;
-    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 }
 
 .about-text.about-appear {
@@ -522,7 +521,6 @@ iframe {
   
   .side {
     position: absolute;
-    border: 1px solid #ddd;
     opacity: .5;
     transition: .5s;
     font-size: 2rem;
@@ -531,6 +529,7 @@ iframe {
 
     .side i {
         font-size: 4rem;
+        transition: .5s;
     }
 
     .side:nth-child(1) {
@@ -542,7 +541,6 @@ iframe {
         width: 250px;
         font-weight: 900;
         transform: rotateX(90deg) translateZ(40px);
-        color: #fff;
 }
 
     .side:nth-child(1) i {

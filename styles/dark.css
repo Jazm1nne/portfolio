@@ -19,12 +19,22 @@
     background-color: var(--background-color);
   }
 
+  header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/Gaspare_Tortora_minimalistic_high_resolution_web_developer_imag_56225a52-2a70-4fc0-8ffe-b7027d403eb8.png);
+  }
+
   header ul li {
     background-image:
     linear-gradient(var(--list-background) 0 0),
     linear-gradient(var(--list-background) 0 0);
     outline: .3rem solid var(--accent);
+    background-color: var(--type-background);
   }
+
+  header ul li a {
+    color: var(--text-color)
+  }
+  
 
   .typewriter {
     background-color: var(--type-background);
@@ -34,6 +44,8 @@
   .about-text {
     outline: 1px solid white;
     background-color: var(--div-background);
+    color: var(--text-color);
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
   }
 
   .project, .tech-stack {
@@ -79,4 +91,12 @@ footer {
 .signature:hover {
   color: var(--signature-text);
   box-shadow: inset 200px 0 0 0 var(--signature-bg);
+}
+
+.side {
+  border: .5px solid var(--text-color);
+}
+
+.side:nth-child(1) {
+  color: var(--text-color);
 }
