@@ -103,3 +103,7 @@ box-shadow: inset 200px 0 0 0 var(--signature-bg);
 .facebook:hover a, .facebook:hover i, .instagram:hover a, .instagram:hover i, .linkedin:hover a, .linkedin:hover i, .github:hover a, .github:hover i, .contact h2 {
   color: white;
 }
+
+button:hover, button:hover a {
+  color: white;
+}
