@@ -4,7 +4,7 @@ const projectEffect = () => {
         const scrollPosition = window.scrollY + window.innerHeight;
         const section = document.querySelector('#projects');
         const sectionTop = section.offsetTop + 500;
-        const sectionBottom = sectionTop + section.offsetHeight;
+        const sectionBottom = sectionTop + section.offsetHeight + 200;
     
         if (scrollPosition > sectionTop && scrollPosition < sectionBottom) {
             document.querySelector('.project-1').style = "transform: translateX(0%); opacity: 1"
