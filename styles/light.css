@@ -1,6 +1,6 @@
 /*LIGHT THEME*/
 :root {
-  --background-color: rgb(47, 193, 242);
+  --background-color: rgb(109, 218, 255);
   --text-color: #000000;
   --list-background: #f1f284;
   --type-background: #2f5cf278;
@@ -100,6 +100,6 @@ box-shadow: inset 200px 0 0 0 var(--signature-bg);
   color: var(--text-color);
 }
 
-.facebook:hover a, .facebook:hover i, .instagram:hover a, .instagram:hover i, .linkedin:hover a, .linkedin:hover i, .github:hover a, .github:hover i {
+.facebook:hover a, .facebook:hover i, .instagram:hover a, .instagram:hover i, .linkedin:hover a, .linkedin:hover i, .github:hover a, .github:hover i, .contact h2 {
   color: white;
 }
