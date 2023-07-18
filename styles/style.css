@@ -423,6 +423,8 @@ p, label {
     flex-direction: column;
     position: absolute;
     margin: 0 auto;
+    opacity: 0;
+    transition: .8s;
 }
 
 .top {
@@ -472,6 +474,10 @@ p, label {
 
 .next {
     right: 200px
+}
+
+.show-card {
+    opacity: 1;
 }
 
 /*PROJECTS*/
