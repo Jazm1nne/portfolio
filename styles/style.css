@@ -257,7 +257,7 @@ a {
 }
 
 body {
-    overflow-x: hidden;
+
 }
 
 body, button {
@@ -266,6 +266,8 @@ body, button {
 
 body, html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100vw;
 }
 
 h1 {
