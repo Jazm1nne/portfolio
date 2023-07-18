@@ -23,7 +23,7 @@ header {
   background-image: url(../assets/Gaspare_Tortora_minimalistic_high_resolution_web_developer_imag_56225a52-2a70-4fc0-8ffe-b7027d403eb8.png);
 }
 
-header ul li {
+.list-item-container {
   background-image:
   linear-gradient(var(--list-background) 0 0),
   linear-gradient(var(--list-background) 0 0);
@@ -31,7 +31,7 @@ header ul li {
   background-color: var(--type-background);
 }
 
-header ul li a {
+.list-item {
   color: var(--text-color)
 }
 
@@ -110,4 +110,12 @@ button:hover, button:hover a {
 
 .theme-button:hover {
   color: black;
+}
+
+.mobile-header-menu {
+  background-color: var(--list-background);
+}
+
+.burger, .hamburger-menu::before, .hamburger-menu::after {
+  background-color: var(--text-color);
 }

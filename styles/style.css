@@ -21,7 +21,7 @@ header {
     outline: 1px solid white;
 }
 
-header ul {
+.list {
     width: 100%;
     padding: 0;
     display: flex;
@@ -32,13 +32,13 @@ header ul {
     gap: 1rem;
 }
 
-header ul li a {
+.list-item {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-header ul li {
+.list-item-container {
     list-style: none;
     width: 100%;
     background-repeat: no-repeat;
@@ -56,7 +56,7 @@ header ul li {
     outline: 0.4rem solid;
 }
 
-header ul li:hover {
+.list-item-container:hover {
     background-size: 50% 100%;
     background-position:
       0 100%,
@@ -65,10 +65,36 @@ header ul li:hover {
     transform: translate(-80%);
 }
 
-header ul li i {
+.mobile-list-item-container {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+
+.list-icon {
     position: absolute;
     left: 3rem;
     font-size: 3rem;
+}
+
+.mobile-header-menu {
+    display: none;
+    width: 100vw;
+    height: 6rem;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.mobile-list {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 0;
+    font-size: 2rem;
 }
 
 .header-menu {
@@ -85,10 +111,14 @@ header ul li i {
   transform: translate(80%);
 }
 
-.header-menu button {
+.theme-button {
     font-family: 'Monoton', cursive;
     background-color: transparent;
     border: none;
+}
+
+.mobile-header-menu {
+    font-family: 'Monoton', cursive;
 }
 
 @keyframes translate {
@@ -120,7 +150,7 @@ header ul li i {
 }
   
 .typewriter {
-    width: 50%;
+    width: 600px;
     white-space: normal;
     word-wrap: break-word;
     border-radius: 1.5rem;
@@ -128,7 +158,7 @@ header ul li i {
     top: 20vh;
     left: 10vh;
     padding: 6rem;
-    height: 300px;
+    height: 350px;
     font-family: 'Megrim', cursive;
     font-size: 2.5rem;
 }
@@ -159,6 +189,59 @@ h1::after {
     bottom: -30px;
     right: 140px;
     border: none;
+}
+
+.hamburger-menu {
+    display: none;
+    margin-top: 2rem;
+    cursor: pointer;
+    height: 100%;
+    z-index: 1;
+}
+
+.hamburger-menu.is-active::after {
+    transform: rotate(-45deg) translate(-9px, 1.5px);
+  }
+  
+  .hamburger-menu.is-active::before {
+    transform: rotate(45deg) translate(-6px, -0.5px);
+  }
+
+    .is-active .burger {
+    opacity: 0;
+  }
+
+.burger {
+    height: 0.5rem;
+    width: 5rem;
+    top: 2rem;
+}
+
+.burger, .hamburger-menu::before, .hamburger-menu::after {
+    content: "";
+    height: 0.5rem;
+    width: 5rem;
+    display: block;
+    position: absolute;
+    transition: .3s;
+}
+
+.hamburger-menu::before {
+    top: 3rem;
+}
+
+.hamburger-menu::after {
+    top: 1rem;
+}
+
+.open-menu {
+    height: 100vh;
+    transition: .4s;
+    justify-content: flex-start;
+}
+
+.show-menu {
+    display: flex !important;
 }
 
   /*GENERAL STYLING*/
@@ -300,7 +383,7 @@ p, label {
 }
 
 .tech-icon {
-    width: 80px;
+    width: 8rem;
     transition: .3s;
     filter: grayscale(100%);
 }
@@ -334,7 +417,7 @@ p, label {
     height: 200px;
     overflow: hidden;
     position: relative;
-    transition: .3s ease;
+    transition: .8s ease;
     border-radius: 1rem;
 }
 
@@ -360,7 +443,6 @@ iframe {
     grid-row-end: 1;
     transform: translateX(-100%);
     opacity: 0;
-    transition: .6s;
 }
 
 .tech-stack-1 {
@@ -370,7 +452,6 @@ iframe {
     grid-row-end: 1;
     transform: translateY(-100%);
     opacity: 0;
-    transition: .6s;
 }
 
 .project-2 {
@@ -380,7 +461,6 @@ iframe {
     grid-row-end: 2;
     transform: translateX(100%);
     opacity: 0;
-    transition: .6s;
 }
 
 .tech-stack-2 {
@@ -390,7 +470,6 @@ iframe {
     grid-row-end: 2;
     transform: translateX(-100%);
     opacity: 0;
-    transition: .6s;
 }
 
 .project-3 {
@@ -400,7 +479,6 @@ iframe {
     grid-row-end: 3;
     transform: translateX(-100%);
     opacity: 0;
-    transition: .6s;
 }
 
 .tech-stack-3 {
@@ -410,7 +488,6 @@ iframe {
     grid-row-end: 3;
     transform: translateY(100%);
     opacity: 0;
-    transition: .6s;
 }
 
 .project-info {
@@ -459,7 +536,6 @@ iframe {
 /*SOCIAL*/
 
 .social-container {
-    display: flex;
     height: 200px;
     min-width: fit-content;
     justify-content: space-around;
@@ -691,4 +767,121 @@ iframe {
     .signature {
         transition: .5s;
         padding: 0 .5rem;
+    }
+
+    /*MEDIA QUERIES*/
+
+    @media (max-width: 1200px) {
+        html {
+            font-size: 50%;
+        }
+
+        .header-menu {
+            display: none;
+        }
+
+        .mobile-header-menu {
+            display: flex;
+        }
+
+        .typewriter {
+            height: 250px;
+        }
+
+        .social-container {
+            flex-direction: column;
+            gap: 15rem;
+            flex-wrap: wrap;
+        }
+
+        .wrapper {
+            max-width: 900px;
+        }
+    }
+
+    @media (max-width: 900px) {
+        html {
+            font-size: 40%;
+        }
+
+        .call-to-action {
+            bottom: -15px;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .typewriter {
+            height: 200px;
+            top: 0;
+            left: 0;
+        }
+
+        .wrapper {
+            max-width: 700px;
+        }
+
+        .project-list {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: 700px) {
+        .social-container {
+            height: fit-content;
+            gap: 20rem;
+        }
+
+        .mobile-list {
+            display: none;
+            position: absolute;
+            flex-direction: column;
+            height: 100%;
+            font-size: 4rem;
+            align-items: center;
+            transition: .4s;
+            opacity: 1;
+        }
+
+        .mobile-header-menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .4s;
+        }
+
+        .hamburger-menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .about-section {
+            flex-direction: column;
+            gap: 5rem;
+            margin-bottom: 10rem;
+        }
+
+        .about-text {
+            width: 80%;
+        }
+
+        .footer {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer {
+            align-items: center;
+            justify-content: center;
+            height: fit-content;
+        }
+    }
+
+    @media (max-width: 480px) {
+
     }
