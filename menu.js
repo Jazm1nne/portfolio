@@ -8,9 +8,10 @@ const openMenu = () => {
         menuList.classList.toggle('show-menu');
         burgerIcon.classList.toggle('is-active');
     })
-
     menuList.addEventListener('click', () => {
-        menuContainer.classList.toggle('open-menu');
+        if (window.innerWidth <= 700) {
+            menuContainer.classList.toggle('open-menu');
+        }
         menuList.classList.toggle('show-menu');
         burgerIcon.classList.toggle('is-active');
     })
