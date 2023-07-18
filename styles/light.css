@@ -2,7 +2,7 @@
 :root {
   --background-color: rgb(185, 237, 255);
   --text-color: #000000;
-  --list-background: #f1f284;
+  --list-background: #f0f284de;
   --type-background: #2f5cf278;
   --div-background: #2f5cf278;
   --accent: rgb(47, 92, 242);
@@ -118,4 +118,8 @@ button:hover, button:hover a {
 
 .burger, .hamburger-menu::before, .hamburger-menu::after {
   background-color: var(--text-color);
+}
+
+.top {
+  background-color: var(--accent);
 }

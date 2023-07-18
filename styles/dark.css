@@ -108,3 +108,7 @@ footer {
 .burger, .hamburger-menu::before, .hamburger-menu::after {
   background-color: var(--text-color);
 }
+
+.top {
+  background-color: var(--accent);
+}
