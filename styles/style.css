@@ -302,6 +302,14 @@ p, label {
     z-index: 1;
 }
 
+a, button, input, textarea {
+    -webkit-tap-highlight-color: transparent;
+    -ms-user-select: none; 
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    user-select: none; 
+  }
+
 /*ABOUT*/
 
 .about-text {
