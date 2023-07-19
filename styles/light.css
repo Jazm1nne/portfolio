@@ -123,3 +123,7 @@ button:hover, button:hover a {
 .top {
   background-color: var(--accent);
 }
+
+.link {
+  color: var(--accent);
+}

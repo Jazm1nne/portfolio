@@ -486,6 +486,15 @@ a, button, input, textarea {
 
 .show-card {
     opacity: 1;
+    z-index: 1;
+}
+
+.link {
+    transition: 0s !important;
+}
+
+.link:hover {
+    text-decoration: underline;
 }
 
 /*PROJECTS*/

@@ -2,7 +2,7 @@ export const typeWriter = () => {
     const typewriter = document.querySelector('h1');
     const text = `A Web Developer on an epic journey to conquer the digital universe </>`;
     const textLength = text.length;
-    const cadence = 50;
+    const cadence = 70;
     let index = 0;
     let intervalId; // Variable to hold the interval ID
   
