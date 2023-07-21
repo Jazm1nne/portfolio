@@ -941,6 +941,11 @@ iframe {
         .project-list {
             display: flex;
             flex-direction: column;
+            align-items: center;
+        }
+
+        .project, .tech-stack {
+            width: 80%;
         }
 
         .previous {
