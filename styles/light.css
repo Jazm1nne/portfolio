@@ -3,7 +3,7 @@
   --background-color: rgb(185, 237, 255);
   --text-color: #000000;
   --list-background: #f0f284de;
-  --type-background: #2f5cf278;
+  --type-background: #2f5cf2ad;
   --div-background: #2f5cf278;
   --accent: rgb(47, 92, 242);
   --accent-hover: #2fc1f284;
@@ -20,7 +20,7 @@ body {
 }
 
 header {
-  background-image: url(../assets/Gaspare_Tortora_minimalistic_high_resolution_web_developer_imag_56225a52-2a70-4fc0-8ffe-b7027d403eb8.png);
+  background-image: url(../assets/Gaspare_Tortora_minimalistic_high_resolution_web_developer_imag_56225a52-2a70-4fc0-8ffe-b7027d403eb81.png);
 }
 
 .list-item-container {
@@ -55,18 +55,20 @@ header {
   background: linear-gradient(to right, var(--background-color) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
-.call-to-action, .submit-button, .more-details, .tech-buttons button, .back-to-top {
+.call-to-action, .submit-button, .more-details, .tech-buttons button, .back-to-top, .view-all {
   border: 1px solid var(--accent);
   box-shadow: inset 0 0 0 -100px var(--accent);
   background-color: var(--background-color);
 }
 
-.call-to-action:hover, .submit-button:hover, .more-details:hover, .tech-buttons button:hover, .back-to-top:hover {
+.call-to-action:hover, .submit-button:hover, .more-details:hover, .tech-buttons button:hover, .back-to-top:hover, .view-all:hover {
   box-shadow: inset 400px 0 0 -100px var(--accent);
 }
 
 input {
-border-bottom: 1px solid var(--accent);
+border-bottom: 2px solid var(--accent);
+color: white;
+background-color: rgba(0, 0, 0, 0.8);
 }
 
 input::placeholder {
@@ -126,4 +128,8 @@ button:hover, button:hover a {
 
 .link {
   color: var(--accent);
+}
+
+.contact {
+  background-image: url('../assets/0_1.png');
 }

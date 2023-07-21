@@ -499,6 +499,10 @@ a, button, input, textarea {
 
 /*PROJECTS*/
 
+.projects {
+    display: grid;
+}
+
 .project-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -628,6 +632,14 @@ iframe {
     height: 200px;
 }
 
+.view-all {
+    font-size: 2rem;
+    padding: 1rem 4rem;
+    margin-top: 5rem;
+    justify-self: center;
+    border-radius: 5rem;
+}
+
 /*SOCIAL*/
 
 .social-container {
@@ -755,6 +767,7 @@ iframe {
         flex-direction: column;
         margin: 10rem auto auto auto;
         position: relative;
+        gap: 4rem;
     }
 
     .contact-info {
@@ -778,15 +791,16 @@ iframe {
     }
 
     input[id="message"]{
-        height: 400px;
+        padding-bottom: 400px;
         width: 100%;
     }
 
     input {
         outline: none;
         border: none;
-        background-color: transparent;
         font-size: 2rem;
+        padding: 2rem;
+        border-radius: 2rem;
     }
 
     .submit-button {
@@ -796,15 +810,12 @@ iframe {
         align-self: center;
         border-radius: 5rem;
         padding: 1rem 4rem;
-        border: none;
     }
 
     .contact {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/minimal.png');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        background-attachment: fixed;
         padding: 5rem;
         height: fit-content;
         min-height: 100vh;
